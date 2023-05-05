@@ -1,1 +1,1 @@
-# front_project
+# HTML+CSS+JavaScript
