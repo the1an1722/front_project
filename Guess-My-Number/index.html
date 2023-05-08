@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Guess My Number</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-fa+GJLe6eKOU6jlhBEJxkT6TlTnTnU6/X9U6P2y6Sl67oRbJGhTGxgKjuZOq+r1fY18pks/cGJ9XOK+i3WMJ1A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<div class="container" id="bigContainer">
+		<div class="header">
+			<div class="rule">Guess the Number Between 1 and 100</div>
+			<input class="btn" type="submit" value="Play Now!" onclick="startOver()"></input>
+		</div>
+
+		<h1 class="title">Guess My Number!</h1>
+		<div class="middle-display-area">
+			<div class="decoration-line"></div>
+			<div class="answer-display-box" id="answerBox">
+				<h1 class="answer" id="answer">??</h1>
+			</div>
+		</div>
+
+		<div class="buttom-display-area">
+			<div class="score-display-area">
+				<div class="hint-div" id="hint-div">
+					<h3 class="hint">Let's Start Guessing now.</h3>
+				</div>
+
+				<div class="score-div">
+					<img src="icons/piggy-bank-solid.svg">
+					<h3 class="score">Score: <span id="score">10</span></h3>
+				</div>
+
+				<div class="highscore-div">
+					<img src="icons/medal-solid.svg">
+					<h3 class="highscore">Highscore: <span id="highscore">0</span></h3>
+				</div>
+			</div>
+
+			<div class="number-input-area">
+				<input class="number-input" id="numberInput" type="number"
+					oninput="checkNumRange(this.value), updateSlide()" autofocus>
+				<input class="number-input-slide" id="numberInputSlide" type="range" min="1" max="100"
+					oninput="updateOutput()" />
+				<input class="btn" id="checkBtn" type="submit" value="Check!" onclick="checkAns()"></input>
+			</div>
+
+		</div>
+
+		<div class="guessing-history">
+			<h4>Guessed History</h4>
+			<div id="guessingHistory">
+			</div>
+		</div>
+	</div>
+
+	<div class="time-to-get-ill">
+		<style>
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -.125em;
+			}
+		</style>
+		What time is it...
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
+			<path fill="currentColor"
+				d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" />
+		</svg>
+	</div>
+
+</body>
+
+</html>
