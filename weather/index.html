@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="location-search-bar">
+            <div class="location-search-bar-left">
+                <input type="number" type="search" class="location-search-city" placeholder="Zip Code" />
+                <input type="submit" class="location-search-submit" value="Search By Zip" />
+                <div class="zipcode-error-message"></div>
+            </div>
+            <a class="location-search-my-location"><img src="location-arrow-solid.svg"></a>
+        </div>
+
+
+        <div class="weather-info">
+            <div class="location">New York</div>
+            <div class="weather-summary">Sunny</div>
+            <div class="temperature">0&deg;F</div>
+        </div>
+
+        <div class="weather-alert"></div>
+
+        <hr>
+
+        <div class="weather-hourly"></div>
+
+        <hr>
+
+        <div class="weather-daily"></div>
+
+    </div>
+
+
+</body>
+
+</html>
