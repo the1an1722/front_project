@@ -124,20 +124,6 @@ a:hover {
   outline:none;
 }
 
-.blur-box {
-  top: 2.8125rem;
-  height: 100%;
-  box-shadow: 0 .0625rem .25rem 0 rgba(0, 0, 0, 0.999);
-  backdrop-filter: blur(.25rem);
-  -webkit-backdrop-filter: blur(.25rem);  
-}
-
-/* 
-.desktop-nav ul li:hover .blur-box {
-  display: block;
-  position: absolute;
-  top: 25rem;
-} */
 
 /* .desktop-nav ul li:hover > .submenu {
   position: absolute;
