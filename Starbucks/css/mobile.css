@@ -18,7 +18,7 @@
     height: 100vh;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
-    background-color: green;
+    background-color: rgb(230, 238, 230);
     padding-left: 20px;
     display: none;
     z-index: 9998;
@@ -46,7 +46,7 @@
     height: 100vh;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
-    background-color: red;
+    background-color: rgb(230, 238, 230);
     padding-left: 20px;
     display: none;
     z-index: 9999;
