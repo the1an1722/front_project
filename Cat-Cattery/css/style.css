@@ -76,7 +76,6 @@
 /* Modify the indicator color and spacing */
 .carousel-container .carousel-inner .item img {
     height: 41.875rem;
-    /* 设置所需的图片高度 */
 }
 
 
@@ -218,7 +217,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30rem;  /* 你需要设置一个合适的高度，或者和图片的高度一样 */
+    height: 30rem;
 }
 
 
@@ -331,16 +330,15 @@
     width: 40%;
     flex-grow: 1;
     margin-bottom: 10px;
-    overflow-x: hidden; /* 隐藏横向滚动条 */
-    word-wrap: break-word; /* 如果单词过长会被分割到下一行 */
+    overflow-x: hidden; /* hide horizontal scrollbar */
+    word-wrap: break-word; /* If the word is too long it will be split on the next line */
 }
 
 .popup-content .popup-description p {
-    /* 在这里添加你想要的样式 */
     white-space: normal;
-    color: blue;  /* 这只是个例子，将p标签的字体颜色设置为蓝色 */
-    font-size: 16px;  /* 将字体大小设置为16px */
-    /* ...其他样式... */
+    color: blue;
+    font-size: 16px;
+
 }
 
 
@@ -472,7 +470,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 75%; /* 地图的宽高比，这个数值可能需要调整以适应你的设计 */
+    padding-top: 75%;
 }
 
 .map-container iframe {
