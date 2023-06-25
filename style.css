@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'SoDoSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* #region navbar */
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 50px;
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.name {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 0 25px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    /* Adjust this value to control the thickness of the underline */
+    text-underline-offset: 5px;
+    /* Adjust this value to control how far the underline is from the text */
+}
+
+/* #endregion narbar */
+
+.hollow-text {
+    font-size: 10vw;
+    font-family: 'futura';
+    font-weight: bolder;
+    line-height: 8.2vw;
+    margin-top: 12vmin;
+    margin-bottom: 5vmin;
+    font-size: 1.5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    background-image: url(./img/about-section.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* #region about seciton */
+.content-container {
+    height: 50vh;
+    /* background-color: aquamarine; */
+    display: flex;
+
+}
+
+.about .image,
+.text {
+    flex: 1;
+    width: 50%;
+    /* takes up half the width */
+    padding: 0 30px;
+    margin-top: 50px;
+    text-align: right;
+}
+
+.content-container text {
+    text-align: center;
+    width: 50%;
+}
+
+.content-container .text h2 {
+    font-size: 10vw;
+
+}
+
+.content-container .text h3 {
+    font-size: 1.3vw;
+    word-wrap: break-word;
+    font-weight: bold;
+
+}
+/* #endregion about seciton */
+
+
+/* #region projects section */
+.projects {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.projects .text,
+.projects .project-container,
+.progress-container {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 10px;
+    margin: 50px 0;
+}
+
+.project {
+    flex-basis: calc(33.33% - 20px);
+    /* Controls the width of each item, minus the width of the spacing and borders */
+    margin: 20px 10px;
+    box-sizing: border-box;
+    /* Box model including borders */
+    border: 3px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projects .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 25rem;
+    /* set the height of the container */
+    aspect-ratio: 4/3;
+    /* Set the aspect ratio to 4:3 */
+    zoom: 1;
+    margin-top: 20px;
+}
+
+/* When there are only two items in the second row, move the last item to the right for center alignment */
+.project-container:nth-child(2) .project:nth-child(3) {
+    margin-right: auto;
+}
+
+.project a {
+    display: block;
+    /* Make the link a block-level element, you can set the width and height */
+    height: 100%;
+    /* Let the link fill the entire project container */
+    padding: 6px;
+    /* Add padding to center link content */
+    box-sizing: border-box;
+    /* Box model including padding */
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.projects .text,
+.progress-container {
+    flex: 1;
+    width: 50%;
+    padding: 0 30px;
+    margin-top: 50px;
+}
+
+.projects .text {
+    text-align: left;
+}
+
+.projects .text h2,
+.projects .text h3 {
+    text-align: left;
+}
+
+.background-1 {
+    background-image: url(./img/about-section.jpg);
+}
+
+.background-2 {
+    background-image: url(./img/project-section.jpg);
+}
+
+.background-3 {
+    background-image: url(./img/skills-section.jpg);
+}
+
+.background-4 {
+    background-image: url(./img/contact-section.jpg);
+}
+/* #endregion projects section */
+
+
+/* #region skills seciton */
+.skills {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.skill .text,
+.progress-container {
+    flex: 1;
+    width: 50%;
+    padding: 0 30px;
+    margin-top: 50px;
+}
+
+.progress-description {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.progress-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    /* Define the spacing of the grid lines */
+}
+
+.progress {
+    height: 20px;
+    background-color: #ddd;
+    /* The color of unfinished progress */
+}
+
+.progress:last-child {
+    margin-right: 0;
+}
+
+.progress-done {
+    height: 20px;
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, .15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .15) 50%,
+            rgba(255, 255, 255, .15) 75%,
+            transparent 75%,
+            transparent);
+    background-color: #007bff;
+    background-size: 40px 40px;
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+.progress,
+.progress-done {
+    border-radius: 10px;
+}
+
+.color1 {
+    background-color: #21b853;
+}
+
+.color2 {
+    background-color: #21b853;
+}
+
+.color3 {
+    background-color: #eacf21;
+}
+
+.color4 {
+    background-color: #eacf21;
+}
+
+.color5 {
+    background-color: #427FDB;
+}
+
+.color6 {
+    background-color: #0277BD;
+}
+
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+/* #endregion skills seciton */
+
+
+/* #region contact section */
+.contact {
+    padding-left: 6vw;
+}
+
+.fullsize-content {
+    width: 80%;
+}
+
+.fullsize-content h2 {
+    font-size: 10vh;
+
+}
+
+.contact-btn {
+    position: absolute;
+    margin: 1.625rem 0;
+    height: 70px;
+    width: 21.875rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #545454;
+    text-align: center;
+    text-decoration: none;
+    line-height: 70px;
+    border-radius: 8px;
+    border: 2px solid #000000;
+    transition: 0.8s;
+
+}
+
+.contact-btn:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    transition: 1s;
+    text-decoration: none;
+}
+
+.icon-links {
+    margin-top: 12.5rem;
+}
+
+.icon-links a {
+    font-size: 5vw;
+    margin: 10px;
+}
+
+.icon-links a:first-child i {
+    margin-left: 0;
+}
+
+/* #endregion contact section */
+
+.footer {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 600px) {
+
+    /* #region narbar */
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .name-container {
+        justify-content: flex-start;
+        margin-right: 50px;
+    }
+
+    .navbar-container {
+        justify-content: flex-end;
+    }
+    /* #endregion narbar */
+
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .name-container,
+    .navbar-container {
+        justify-content: center;
+    }
+
+    .content-container {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .content-container .text {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .content-container .text h2 {
+        text-align: center;
+    }
+
+    .content-container .text h3 {
+        text-align: start;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .about .text {
+        padding: 0 30px;
+    }
+
+    .image,
+    .text {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        /* include padding and border in element's total width and height */
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text h2 {
+        font-size: 6vh;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .projects .text,
+    .projects .project-container {
+        flex: 1;
+        max-width: 100%;
+        padding: 0 10px;
+        margin: 50px 0;
+    }
+
+    .projects .text {
+        width: 100%;
+    }
+
+    .projects .text h3 {
+
+        text-align: start;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .progress-container {
+        grid-template-columns: 1fr;
+    }
+
+    .content-container.skills .text {
+        order: 1;
+    }
+
+    .content-container.skills .progress-container {
+        order: 2;
+    }
+
+    .contact {
+        padding-left: 3vw;
+    }
+
+    .fullsize-content {
+        width: 90%;
+    }
+
+    .fullsize-content h2 {
+        font-size: 5vh;
+    }
+
+    .contact-btn {
+        width: 80%;
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .icon-links {
+        margin-top: 10vh;
+    }
+
+    .icon-links a {
+        font-size: 8vw;
+    }
+}
