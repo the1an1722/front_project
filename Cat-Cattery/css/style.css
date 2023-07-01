@@ -238,12 +238,22 @@
 .image-block .description {
     margin-top: 10px;
     text-align: center;
-
 }
 
 .image-block .description p {
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+.image-block .description p:first-of-type {
+    font-weight: 400;
+  }
+  
+
+
+.image-block .description p span {
+    font-size: 1vw;
+    font-weight: 700;
 }
 
 .image-block .breed {
