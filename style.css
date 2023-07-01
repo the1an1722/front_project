@@ -1,15 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     font-family: 'SoDoSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* #region navbar */
 .navbar {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: auto;
+    /* height: 5vh;
+    line-height: 5vh; */
     background-color: #f8f9fa;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+    overflow: auto; 
 }
 
 .container {
@@ -57,27 +62,37 @@
 
 /* #endregion narbar */
 
+
+.wrapper {
+    margin-top: 5vh;
+}
+
 .hollow-text {
-    font-size: 10vw;
-    font-family: 'futura';
-    font-weight: bolder;
-    line-height: 8.2vw;
-    margin-top: 12vmin;
-    margin-bottom: 5vmin;
-    font-size: 1.5rem;
-    color: transparent;
-    -webkit-text-stroke: 1px black;
-    background-image: url(./img/about-section.jpg);
-    -webkit-background-clip: text;
-    background-clip: text;
+	font-size: 10vw;
+	font-family: 'futura';
+	font-weight: bolder;
+	line-height: 12vmax;
+    height: 12vmax;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position-x: center;
+	-webkit-background-clip: text;
+	color: transparent;
+	margin-top: 12vmin;
+	margin-bottom: 5vmin;
 }
 
 /* #region about seciton */
 .content-container {
-    height: 50vh;
+    min-height: auto;
+    overflow: auto;
     /* background-color: aquamarine; */
     display: flex;
+}
 
+
+.about {
+    min-height: 50vh;
 }
 
 .about .image,
@@ -86,7 +101,7 @@
     width: 50%;
     /* takes up half the width */
     padding: 0 30px;
-    margin-top: 50px;
+    margin-top: 25px;
     text-align: right;
 }
 
@@ -97,7 +112,6 @@
 
 .content-container .text h2 {
     font-size: 10vw;
-
 }
 
 .content-container .text h3 {
@@ -113,7 +127,7 @@
 .projects {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    margin: 0 40px;
 }
 
 .projects .text,
@@ -121,14 +135,13 @@
 .progress-container {
     flex: 1;
     max-width: 50%;
-    padding: 0 10px;
-    margin: 50px 0;
 }
 
 .project {
     flex-basis: calc(33.33% - 20px);
     /* Controls the width of each item, minus the width of the spacing and borders */
-    margin: 20px 10px;
+    margin: 0 10px;
+    margin-top: 1vh;
     box-sizing: border-box;
     /* Box model including borders */
     border: 3px solid #000;
@@ -136,19 +149,16 @@
     overflow: hidden;
 }
 
-.projects .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 900px;
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1vh;
+    width: 80%;
+    height: 600px;
     margin: 0 auto;
-    height: 25rem;
-    /* set the height of the container */
-    aspect-ratio: 4/3;
-    /* Set the aspect ratio to 4:3 */
-    zoom: 1;
-    margin-top: 20px;
+    margin-top: 20vh;
 }
+
 
 /* When there are only two items in the second row, move the last item to the right for center alignment */
 .project-container:nth-child(2) .project:nth-child(3) {
@@ -177,7 +187,7 @@
     flex: 1;
     width: 50%;
     padding: 0 30px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .projects .text {
@@ -194,7 +204,7 @@
 }
 
 .background-2 {
-    background-image: url(./img/project-section.jpg);
+    background-image: url(./img/Prehistoric-Planet-Islands.webp);
 }
 
 .background-3 {
@@ -223,16 +233,21 @@
 }
 
 .progress-description {
-    font-size: 16px;
+    font-size: 2vh;
     margin-bottom: 5px;
+    font-weight: 600;
+
 }
 
 .progress-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
+    grid-gap:  5rem;
     /* Define the spacing of the grid lines */
+    max-height: 10vh;
+    margin-top: 10vh;
 }
+
 
 .progress {
     height: 20px;
@@ -240,9 +255,9 @@
     /* The color of unfinished progress */
 }
 
-.progress:last-child {
+/* .progress:last-child {
     margin-right: 0;
-}
+} */
 
 .progress-done {
     height: 20px;
@@ -390,6 +405,7 @@
     .name-container,
     .navbar-container {
         justify-content: center;
+
     }
 
     .content-container {
@@ -405,12 +421,14 @@
 
     .content-container .text h2 {
         text-align: center;
+        font-size: 6vh;
     }
 
     .content-container .text h3 {
         text-align: start;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        font-size: 4vw;
     }
 
     .about .text {
@@ -438,23 +456,17 @@
         overflow-wrap: break-word;
     }
 
-    .projects .text,
-    .projects .project-container {
+    .projects .text {
         flex: 1;
         max-width: 100%;
-        padding: 0 10px;
-        margin: 50px 0;
+    }
+
+    .projects .project-container {
+        margin: 2vh 6.1vh;
     }
 
     .projects .text {
         width: 100%;
-    }
-
-    .projects .text h3 {
-
-        text-align: start;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
     }
 
     .progress-container {
@@ -489,10 +501,33 @@
     }
 
     .icon-links {
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 
     .icon-links a {
         font-size: 8vw;
     }
+
+    .projects .project-container .project {
+        flex: 0 0 auto; /* Modify here so that the item no longer automatically resizes according to the content */
+        width: 11rem;
+        height: 12rem;
+      }
 }
+
+@media screen and (min-width: 600px) {
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 80%;
+    }
+  
+    .projects .project-container .project {
+      flex: 0 0 auto; /* Modify here so that the item no longer automatically resizes according to the content */
+      width: 13rem;
+      height: 15rem;
+    }
+  }
+
+  
+
+  
