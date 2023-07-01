@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="shortcut icon" href="./img/favicon.jpeg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/5ef25a6e73.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/mattboldt/typed.js@latest/lib/typed.min.js"></script>
-
+    
 
 </head>
 
@@ -31,7 +30,7 @@
 
     <div class="wrapper">
         <section class="content-container about clearfix" id="about">
-            <div class="image" style="margin-top: 10vh;"><img src="./img/info1.png" alt=""></div>
+            <div class="image" style="margin-top: 10vh;"><img src="./img/info.png" alt=""></div>
             <div class="text">
                 <h2 class="hollow-text background-1">About</h2>
                 <h3>Hi! I'm <span id="typed"></span>. Welcome to my website.I'm a
@@ -52,13 +51,15 @@
             <div class="project-container">
                 <div class="project">
                     <a href="https://www.nike.com">
-                        <img src="./img/screencapture-Cat-Cattery.png" alt="Cat-Cattery Preview">
+                        <img src="./img/screencapture-Cat-Cattery.png"
+                            alt="Cat-Cattery Preview">
                     </a>
                 </div>
 
                 <div class="project">
                     <a href="https://example.com/project1">
-                        <img src="./img/screencapture-Apple-Web-Imitation.png" alt="Project 1">
+                        <img src="./img/screencapture-Apple-Web-Imitation.png"
+                            alt="Project 1">
                     </a>
                 </div>
                 <div class="project">
@@ -160,7 +161,7 @@
         var typedElement = document.getElementById('typed');
         var isPaused = false;
 
-        typedElement.addEventListener('click', function () {
+        typedElement.addEventListener('click', function() {
             if (isPaused) {
                 typed.start();
                 isPaused = false;
