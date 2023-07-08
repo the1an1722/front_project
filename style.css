@@ -1,36 +1,71 @@
 /* #region reset style */
 /* Basic setting */
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
     margin: 0;
     padding: 0;
 }
 
-ul,ol {
+ul,
+ol {
     list-style: none;
 }
 
 img {
     /* Bottom blank */
     display: block;
-	border:0;
+    border: 0;
 }
 
-b,strong {
+b,
+strong {
     font-weight: 400;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     /* Percentage of font size of parent element */
     font-size: 100%;
     font-weight: normal;
 }
 
-i,em {
+i,
+em {
     /* Not inclined */
     font-style: normal;
 }
 
-u,ins,s,del {
+u,
+ins,
+s,
+del {
     /* Remove dashes and underscores */
     text-decoration: none;
 }
@@ -43,14 +78,16 @@ table {
     border-collapse: collapse;
 }
 
-td,th {
+td,
+th {
     border: 1px solid #999;
 }
 
-input,button {
+input,
+button {
     /* Remove outline */
     outline: none;
-    border:none;
+    border: none;
 }
 
 /* Style settings */
@@ -65,7 +102,7 @@ a {
 }
 
 a:hover {
-    color:#2ddd5f;
+    color: #2ddd5f;
     text-decoration: none;
 }
 
@@ -106,7 +143,7 @@ a:hover {
     line-height: 5vh; */
     background-color: #f8f9fa;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
-    overflow: auto; 
+    overflow: auto;
 }
 
 .container {
@@ -160,18 +197,18 @@ a:hover {
 }
 
 .hollow-text {
-	font-size: 10vw;
-	font-family: 'futura';
-	font-weight: bolder;
-	line-height: 12vmax;
+    font-size: 10vw;
+    font-family: 'futura';
+    font-weight: bolder;
+    line-height: 12vmax;
     height: 12vmax;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position-x: center;
-	-webkit-background-clip: text;
-	color: transparent;
-	margin-top: 12vmin;
-	margin-bottom: 5vmin;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 12vmin;
+    margin-bottom: 5vmin;
 }
 
 /* #region about seciton */
@@ -212,6 +249,7 @@ a:hover {
     font-weight: bold;
 
 }
+
 /* #endregion about seciton */
 
 
@@ -306,6 +344,7 @@ a:hover {
 .background-4 {
     background-image: url(./img/contact-section.jpg);
 }
+
 /* #endregion projects section */
 
 
@@ -334,7 +373,7 @@ a:hover {
 .progress-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap:  5rem;
+    grid-gap: 5rem;
     /* Define the spacing of the grid lines */
     max-height: 10vh;
     margin-top: 10vh;
@@ -412,6 +451,7 @@ a:hover {
 /* #region contact section */
 .contact {
     padding-left: 6vw;
+    
 }
 
 .fullsize-content {
@@ -427,17 +467,17 @@ a:hover {
     position: absolute;
     margin: 1.625rem 0;
     height: 70px;
+    line-height: 70px;
     width: 21.875rem;
     font-size: 20px;
     font-weight: 500;
     color: #545454;
     text-align: center;
     text-decoration: none;
-    line-height: 70px;
-    border-radius: 8px;
-    border: 2px solid #000000;
+    border-radius: 20px;
+    border: 3px solid #000000;
     transition: 0.8s;
-
+    margin-top: 0;
 }
 
 .contact-btn:hover {
@@ -448,11 +488,11 @@ a:hover {
 }
 
 .icon-links {
-    margin-top: 12.5rem;
+    margin-top: 12.7rem;
 }
 
 .icon-links a {
-    font-size: 5vw;
+    font-size: 3vw;
     margin: 10px;
 }
 
@@ -463,14 +503,13 @@ a:hover {
 /* #endregion contact section */
 
 .footer {
-    font-size: 20px;
+    font-size: 1vh;
     text-align: center;
     margin-bottom: 15px;
     margin-top: 20px;
 }
 
 @media screen and (min-width: 600px) {
-
     /* #region narbar */
     .container {
         flex-direction: row;
@@ -485,7 +524,20 @@ a:hover {
     .navbar-container {
         justify-content: flex-end;
     }
+
     /* #endregion narbar */
+
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 80%;
+    }
+
+    .projects .project-container .project {
+        flex: 0 0 auto;
+        /* Modify here so that the item no longer automatically resizes according to the content */
+        width: 13rem;
+        height: 15rem;
+    }
 
 }
 
@@ -529,10 +581,13 @@ a:hover {
 
     .image,
     .text {
-        width: 100%;
+        width: 100vw;
         padding: 20px;
         box-sizing: border-box;
         /* include padding and border in element's total width and height */
+    }
+    .wrapper .image img {
+        width: 85vw;
     }
 
     .text {
@@ -561,16 +616,26 @@ a:hover {
         width: 100%;
     }
 
+    .projects .project-container .project {
+        flex: 0 0 auto;
+        /* Modify here so that the item no longer automatically resizes according to the content */
+        width: 11rem;
+        height: 12rem;
+    }
+
     .progress-container {
         grid-template-columns: 1fr;
+        max-height: 100%;
+        max-width: 100vw !important;
+        
     }
 
-    .content-container.skills .text {
-        order: 1;
+    .progress-item {
+        width: 68.5vw;
     }
 
-    .content-container.skills .progress-container {
-        order: 2;
+    .skills {
+        flex-direction: column-reverse;
     }
 
     .contact {
@@ -586,40 +651,20 @@ a:hover {
     }
 
     .contact-btn {
-        width: 80%;
-        font-size: 16px;
-        height: 50px;
-        line-height: 50px;
+        max-width: 12rem;
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 0rem;
     }
 
     .icon-links {
-        margin-top: 15vh;
+        margin-top: 6.5rem;
     }
 
     .icon-links a {
-        font-size: 8vw;
+        font-size: 18px;
     }
 
-    .projects .project-container .project {
-        flex: 0 0 auto; /* Modify here so that the item no longer automatically resizes according to the content */
-        width: 11rem;
-        height: 12rem;
-      }
+
 }
-
-@media screen and (min-width: 600px) {
-    .project-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        width: 80%;
-    }
-  
-    .projects .project-container .project {
-      flex: 0 0 auto; /* Modify here so that the item no longer automatically resizes according to the content */
-      width: 13rem;
-      height: 15rem;
-    }
-  }
-
-  
-
-  
