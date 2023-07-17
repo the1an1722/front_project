@@ -1,0 +1,100 @@
+@media screen and (max-width: 768px) {
+
+  .mobile-nav .menu-button {
+    position: fixed;
+    top: 1.875rem;
+    right: 20px;
+    z-index: 9999;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-nav .submenu {
+    position: absolute;
+    top: 4.9rem;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    background-color: rgb(230, 238, 230);
+    padding-left: 20px;
+    display: none;
+    z-index: 9998;
+    padding-top: 1.5rem;
+  }
+
+  .mobile-nav .submenu.show {
+    display: block;
+    animation: slide-in 0.3s ease;
+    z-index: 9998;
+  }
+
+  .mobile-nav .submenu a {
+
+    display: block;
+    padding: 10px 0;
+    color: rgb(46, 45, 45);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .container .text,
+  .container .image {
+    z-index: -10;
+  }
+
+  .nav-content {
+    display: none;
+  }
+
+  .image-block-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto; 
+  }
+
+  .image-block {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .popup {
+    position: static;
+    width: 10%;
+  }
+
+.popup-body {
+    flex-direction: column;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+
+  .gallery a {
+    /* Each a element will take up 50% of the container width, minus the gap */
+    flex: 0 0 calc(50% - 10px) !important;
+    /* Limit the maximum width */
+    max-width: calc(50% - 10px) !important;
+
+  }
+
+  /* Modify the indicator color and spacing */
+  .carousel-indicators li {
+    background-color: #333;
+    /* Increase the spacing */
+    margin-right: 5px;
+
+  }
+}

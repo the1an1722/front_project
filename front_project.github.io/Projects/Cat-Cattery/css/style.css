@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SoDoSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* #region navbar */
+.navbar {
+    background-color: #f2f2f2;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.nav .container {
+    margin: 0 auto;
+    width: 1920px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 8%;
+}
+
+
+.nav-content {
+    margin: 0;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.nav-content ul {
+    white-space: nowrap;
+}
+
+.nav-content ul li {
+    display: inline-flex;
+    padding: 0 1.8rem;
+}
+
+.nav-content ul li:last-child {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* #endregion navbar */
+
+
+
+/* #region carousel section */
+/* Modify the indicator color and spacing */
+.carousel-container .carousel-inner .item img {
+    height: 41.875rem;
+}
+
+
+.carousel-indicators li {
+    background-color: #333;
+    margin-right: .3125rem;
+    /* Increase the spacing */
+}
+
+
+
+/* Hide the controls */
+.carousel-control {
+    opacity: 0;
+}
+
+/* Position of the pause/play button */
+.carousel-pause {
+    position: absolute;
+    bottom: .625rem;
+    right: .625rem;
+    /* Positioned to the right */
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+/* Style for the captions and stream button */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.stream-btn {
+    position: absolute;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    /* Pill shape */
+    border: none;
+}
+
+
+/* #endregion carousel section */
+
+.title-section {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    padding-bottom: 2rem;
+}
+
+.title-section h2 {
+    margin: 0;
+    padding-right: 10px;
+    margin-left: 10px;
+    font-size: large;
+}
+
+.border-line {
+    flex-grow: 1;
+    border-top: 1px solid #ccc;
+}
+
+
+/* #region content section */
+.content-area {
+
+    padding: 20px;
+    margin-top: 20px;
+
+}
+
+
+.content-area img {
+    float: left;
+    margin-right: 20px;
+}
+
+.content-area p {
+    text-transform: capitalize;
+}
+
+.content-area:not(#contacts-section) p::first-letter {
+    font-size: 1.5em;
+}
+
+
+
+.content-area p strong {
+    font-weight: bold !important;
+}
+
+#contacts-section.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacts-section.contact-content p {
+    font-size: 14px;
+    text-transform: capitalize;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* #region image style */
+.available-area {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+.available-area .title-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.image-block {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.image-block img {
+    width: 30rem;
+    height: 30rem;
+}
+.image-block .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+}
+
+
+#image-slider {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f2f2f2;
+}
+
+.image-block-wrapper {
+    display: inline-block;
+    /* margin-right: 20px; */
+    vertical-align: top;
+}
+
+
+.image-block .description {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image-block .description p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.image-block .description p:first-of-type {
+    font-weight: 400;
+  }
+  
+
+
+.image-block .description p span {
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+.image-block .breed {
+    font-weight: bold;
+}
+
+.image-block .price {
+    color: greenyellow;
+}
+
+.image-block .add-to-bag {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+/* #endregion image style */
+
+
+/* #region popup window */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.popup-content {
+    position: relative;
+    background-color: #e0edb1;
+    margin: 0 auto;
+    padding: 20px;
+    /* width: 25rem; */
+    width: 80rem;
+    height: 70rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-header {
+    padding: 10px;
+}
+
+.popup-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popup-content-row {
+    display: flex;
+    flex-direction: row; /* change this from column to row */
+  }
+
+.popup-image {
+    width: 90%;
+    max-height: 80%;
+}
+
+.popup-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.popup-content .popup-header h3 {
+    font-size: x-large;
+    color: #acda24;
+}
+
+.popup-content .border-line {
+    border-top: 5px solid #acda24;
+    margin-top: 2rem;
+}
+
+.popup-content .popup-description {
+    flex: 1;
+    width: 40%;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    overflow-x: hidden; /* hide horizontal scrollbar */
+    word-wrap: break-word; /* If the word is too long it will be split on the next line */
+}
+
+.popup-content .popup-description p {
+    white-space: normal;
+    color: blue;
+    font-size: 16px;
+
+}
+
+
+.counting-shopping {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.counting-shopping a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* #endregion popup window */
+
+/* #region gallery section */
+.responsive:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('./img/Enlarge.png') no-repeat center center / contain;
+}
+
+
+.gallery-section {
+    background-color: #f2f2f2;
+    padding: 1rem;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Add space between the images */
+}
+
+
+
+.gallery a {
+    flex: 0 0 calc(25% - 0px);
+    /* Each a element will take up 25% of the container width, minus the gap */
+    max-width: calc(25% - 10px);
+    /* Limit the maximum width */
+    box-sizing: border-box;
+    margin: 0.3rem;
+}
+
+.gallery img {
+    width: 100%;
+    /* this will make the image resize with the container */
+    height: 35rem;
+}
+
+/* #endregion gallery section */
+
+.contact-content .btn {
+    margin-top: .625rem;
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    background-color: skyblue;
+    color: black;
+    text-decoration: none;
+    border-radius: 5.625rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: lightblue;
+}
+
+
+
+/* Limit carousel width for large screens */
+@media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 75%;
+        margin: auto;
+    }
+
+    .carousel-container {
+        max-width: 75%;
+        margin: auto;
+    }
+
+    .content-area {
+        margin: auto;
+        max-width: 75%;
+    }
+
+    .available-area {
+        max-width: 75%;
+        margin: auto;
+        justify-content: space-around;
+    }
+
+    .gallery-section {
+        max-width: 75%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+
+
+
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
