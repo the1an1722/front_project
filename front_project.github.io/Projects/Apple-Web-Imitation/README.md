@@ -1,1 +1,0 @@
-# apple-web-imitation with responsivee dimensions
