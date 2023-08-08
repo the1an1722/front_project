@@ -1,4 +1,4 @@
-// 切换下拉菜单的显示状态
+// Toggle the display state of the drop-down menu
 $('#navbarDropdownMenuLink1').on('mouseenter', function () {
     $('#dropdownMenu1').show();
     $('#dropdownMenu2, #dropdownMenu3, #dropdownMenu4, #dropdownMenu5, #dropdownMenu6, #dropdownMenu7, #dropdownMenu8, #dropdownMenu9, #dropdownMenu10').hide();
@@ -86,10 +86,10 @@ $('.navbar').on('mouseleave', function () {
 //     searchInput.focus(); // Keep input box focus
 // }
 
-// // When the shopping bag icon is clicked, show or hide the drop-down menu
-// $(".shopping-bag").click(function () {
-//     $(".shopping-bag-dropdown").toggleClass("open");
-// });
+// When the shopping bag icon is clicked, show or hide the drop-down menu
+$(".shopping-bag").click(function () {
+    $(".shopping-bag-dropdown").toggleClass("open");
+});
 
 // Carousel button action
 $(document).ready(function () {
@@ -121,29 +121,28 @@ $(document).ready(function () {
 });
 
 function toggleAccordion(accordionId) {
-	const accordion = document.querySelector(`.accordion:nth-child(${accordionId})`);
-	const content = accordion.querySelector('.accordion-content');
-	const icon = accordion.querySelector('.icon');
-  
-	content.classList.toggle('active');
-	icon.textContent = content.classList.contains('active') ? '-' : '+';
-  }
-  
-  function toggleAccordion(index) {
-	var accordion = document.getElementsByClassName("accordion")[index - 1];
-	var accordionContent = accordion.querySelector(".accordion-content");
-	var icon = accordion.querySelector(".icon");
-  
-	accordion.classList.toggle("active");
-  
-	if (accordion.classList.contains("active")) {
-	  setTimeout(function () {
-		accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-		icon.innerHTML = "-";
-	  }, 10); // 设置延时时间，单位为毫秒
-	} else {
-	  accordionContent.style.maxHeight = "0";
-	  icon.innerHTML = "+";
-	}
-  }
-  
+    const accordion = document.querySelector(`.accordion:nth-child(${accordionId})`);
+    const content = accordion.querySelector('.accordion-content');
+    const icon = accordion.querySelector('.icon');
+
+    content.classList.toggle('active');
+    icon.textContent = content.classList.contains('active') ? '-' : '+';
+}
+
+function toggleAccordion(index) {
+    var accordion = document.getElementsByClassName("accordion")[index - 1];
+    var accordionContent = accordion.querySelector(".accordion-content");
+    var icon = accordion.querySelector(".icon");
+
+    accordion.classList.toggle("active");
+
+    if (accordion.classList.contains("active")) {
+        setTimeout(function () {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+            icon.innerHTML = "-";
+        }, 10); // Set the delay time in milliseconds
+    } else {
+        accordionContent.style.maxHeight = "0";
+        icon.innerHTML = "+";
+    }
+}
