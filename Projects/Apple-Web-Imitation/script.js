@@ -56,41 +56,42 @@ $('.navbar').on('mouseleave', function () {
 });
 
 
-function search(event) {
-    event.preventDefault();
-    // 获取搜索输入框的值
-    const searchValue = document.getElementById('searchInput').value;
-    // 执行搜索操作
-    // 这里可以根据你的需求使用搜索值进行相应的处理，比如跳转到搜索结果页面或执行其他搜索逻辑
-    console.log('Perform search:', searchValue);
-}
+// function search(event) {
+//     event.preventDefault();
+//     // Get the value of the search input box
+//     const searchValue = document.getElementById('searchInput').value;
+//     // Perform a search
+//     // Here you can use the search value to perform corresponding processing according to your needs,
+//     // such as jumping to the search result page or performing other search logic
+//     console.log('Perform search:', searchValue);
+// }
 
-// 获取输入框和删除按钮的引用
-const searchInput = document.getElementById('searchInput');
-const clearButton = document.querySelector('.clear-button');
+// // Get references to the input box and the delete button
+// const searchInput = document.getElementById('searchInput');
+// const clearButton = document.querySelector('.clear-button');
 
-// 监听输入框的输入事件
-searchInput.addEventListener('input', function () {
-    // 如果输入框中有内容，则显示删除按钮；否则隐藏删除按钮
-    if (searchInput.value.length > 0) {
-        clearButton.style.display = 'block';
-    } else {
-        clearButton.style.display = 'none';
-    }
-});
+// // Listen to the input event of the input box
+// searchInput.addEventListener('input', function () {
+//     // If there is content in the input box, the delete button is displayed; otherwise, the delete button is hidden
+//     if (searchInput.value.length > 0) {
+//         clearButton.style.display = 'block';
+//     } else {
+//         clearButton.style.display = 'none';
+//     }
+// });
 
-// 点击删除按钮时清空输入框内容
-function clearSearchInput() {
-    searchInput.value = '';
-    searchInput.focus(); // 保持输入框焦点
-}
+// // Clear the content of the input box when the delete button is clicked
+// function clearSearchInput() {
+//     searchInput.value = '';
+//     searchInput.focus(); // Keep input box focus
+// }
 
-// 当购物袋图标被点击时，显示或隐藏下拉菜单
-$(".shopping-bag").click(function () {
-    $(".shopping-bag-dropdown").toggleClass("open");
-});
+// // When the shopping bag icon is clicked, show or hide the drop-down menu
+// $(".shopping-bag").click(function () {
+//     $(".shopping-bag-dropdown").toggleClass("open");
+// });
 
-// carousel button action
+// Carousel button action
 $(document).ready(function () {
     var $carousel = $("#carouselExampleIndicators");
     var $carouselButton = $("#carouselButton");
