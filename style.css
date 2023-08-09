@@ -1,36 +1,11 @@
 /* #region reset style */
 /* Basic setting */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-blockquote,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-pre,
-form,
-fieldset,
-legend,
-button,
-input,
-textarea,
-th,
-td {
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {
     margin: 0;
     padding: 0;
 }
 
-ul,
-ol {
+ul,ol {
     list-style: none;
 }
 
@@ -40,32 +15,22 @@ img {
     border: 0;
 }
 
-b,
-strong {
+b,strong {
     font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     /* Percentage of font size of parent element */
     font-size: 100%;
     font-weight: normal;
 }
 
-i,
-em {
+i,em {
     /* Not inclined */
     font-style: normal;
 }
 
-u,
-ins,
-s,
-del {
+u,ins,s,del {
     /* Remove dashes and underscores */
     text-decoration: none;
 }
@@ -78,13 +43,11 @@ table {
     border-collapse: collapse;
 }
 
-td,
-th {
+td,th {
     border: 1px solid #999;
 }
 
-input,
-button {
+input,button {
     /* Remove outline */
     outline: none;
     border: none;
@@ -120,19 +83,11 @@ a:hover {
     clear: both;
 }
 
-/* #endregion reset css */
-
-
-
-
-
-
 * {
-    margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
     font-family: 'SoDoSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+/* #endregion reset css */
 
 /* #region navbar */
 .navbar {
@@ -206,9 +161,11 @@ a:hover {
     background-size: cover;
     background-position-x: center;
     -webkit-background-clip: text;
+    -webkit-text-stroke: 1px rgba(191, 255, 0, 0.599) ;
     color: transparent;
     margin-top: 12vmin;
     margin-bottom: 5vmin;
+
 }
 
 /* #region about seciton */
@@ -218,7 +175,6 @@ a:hover {
     /* background-color: aquamarine; */
     display: flex;
 }
-
 
 .about {
     min-height: 50vh;
@@ -249,9 +205,7 @@ a:hover {
     font-weight: bold;
 
 }
-
 /* #endregion about seciton */
-
 
 /* #region projects section */
 .projects {
@@ -274,21 +228,20 @@ a:hover {
     margin-top: 1vh;
     box-sizing: border-box;
     /* Box model including borders */
-    border: 3px solid #000;
-    border-radius: 10px;
+    border: 2px solid #000;
+    border-radius: 1.875rem;
     overflow: hidden;
 }
 
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1vh;
+    gap: 1vw;
     width: 80%;
-    height: 600px;
+    height: 100%;
     margin: 0 auto;
     margin-top: 20vh;
 }
-
 
 /* When there are only two items in the second row, move the last item to the right for center alignment */
 .project-container:nth-child(2) .project:nth-child(3) {
@@ -344,9 +297,7 @@ a:hover {
 .background-4 {
     background-image: url(./img/contact-section.jpg);
 }
-
 /* #endregion projects section */
-
 
 /* #region skills seciton */
 .skills {
@@ -379,16 +330,11 @@ a:hover {
     margin-top: 10vh;
 }
 
-
 .progress {
     height: 20px;
     background-color: #ddd;
     /* The color of unfinished progress */
 }
-
-/* .progress:last-child {
-    margin-right: 0;
-} */
 
 .progress-done {
     height: 20px;
@@ -434,7 +380,6 @@ a:hover {
     background-color: #0277BD;
 }
 
-
 @keyframes progress-bar-stripes {
     from {
         background-position: 40px 0;
@@ -444,9 +389,7 @@ a:hover {
         background-position: 0 0;
     }
 }
-
 /* #endregion skills seciton */
-
 
 /* #region contact section */
 .contact {
@@ -538,7 +481,6 @@ a:hover {
         width: 13rem;
         height: 15rem;
     }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -609,7 +551,7 @@ a:hover {
     }
 
     .projects .project-container {
-        margin: 2vh 6.1vh;
+        margin: 2vh 25vw;
     }
 
     .projects .text {
@@ -665,6 +607,4 @@ a:hover {
     .icon-links a {
         font-size: 18px;
     }
-
-
 }
