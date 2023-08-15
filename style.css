@@ -403,7 +403,6 @@ a:hover {
 
 .fullsize-content h2 {
     font-size: 10vh;
-
 }
 
 .contact-btn {
@@ -442,7 +441,6 @@ a:hover {
 .icon-links a:first-child i {
     margin-left: 0;
 }
-
 /* #endregion contact section */
 
 .footer {
@@ -467,7 +465,6 @@ a:hover {
     .navbar-container {
         justify-content: flex-end;
     }
-
     /* #endregion narbar */
 
     .project-container {
@@ -491,7 +488,7 @@ a:hover {
     .name-container,
     .navbar-container {
         justify-content: center;
-
+        overflow-x: hidden !important;
     }
 
     .content-container {
@@ -551,7 +548,7 @@ a:hover {
     }
 
     .projects .project-container {
-        margin: 2vh 25vw;
+        margin: 2vh 15vw;
     }
 
     .projects .text {
@@ -563,13 +560,13 @@ a:hover {
         /* Modify here so that the item no longer automatically resizes according to the content */
         width: 11rem;
         height: 12rem;
+        overflow-x: hidden !important;
     }
 
     .progress-container {
         grid-template-columns: 1fr;
         max-height: 100%;
-        max-width: 100vw !important;
-        
+        max-width: 100vw !important;      
     }
 
     .progress-item {
