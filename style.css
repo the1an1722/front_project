@@ -488,8 +488,15 @@ a:hover {
     .name-container,
     .navbar-container {
         justify-content: center;
-        overflow-x: hidden !important;
+        /* overflow-x: hidden; */
     }
+
+    .navbar-container .nav-item {
+        margin: 0 1rem;
+    }
+    /* .navbar-container .nav-item:first-child {
+        margin-left: 0 .01rem;
+    } */
 
     .content-container {
         flex-direction: column;
@@ -548,7 +555,7 @@ a:hover {
     }
 
     .projects .project-container {
-        margin: 2vh 15vw;
+        margin: 2vh 14.5vw;
     }
 
     .projects .text {
