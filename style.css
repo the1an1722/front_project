@@ -1,614 +1,651 @@
 /* #region reset style */
 /* Basic setting */
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
 }
 
-ul,ol {
-    list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 
 img {
-    /* Bottom blank */
-    display: block;
-    border: 0;
+  /* Bottom blank */
+  display: block;
+  border: 0;
 }
 
-b,strong {
-    font-weight: 400;
+b,
+strong {
+  font-weight: 400;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    /* Percentage of font size of parent element */
-    font-size: 100%;
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Percentage of font size of parent element */
+  font-size: 100%;
+  font-weight: normal;
 }
 
-i,em {
-    /* Not inclined */
-    font-style: normal;
+i,
+em {
+  /* Not inclined */
+  font-style: normal;
 }
 
-u,ins,s,del {
-    /* Remove dashes and underscores */
-    text-decoration: none;
+u,
+ins,
+s,
+del {
+  /* Remove dashes and underscores */
+  text-decoration: none;
 }
 
 table {
-    border: 1px solid #999;
-    /* Equivalent to cellspacing */
-    border-spacing: 0;
-    /* 1px border */
-    border-collapse: collapse;
+  border: 1px solid #999;
+  /* Equivalent to cellspacing */
+  border-spacing: 0;
+  /* 1px border */
+  border-collapse: collapse;
 }
 
-td,th {
-    border: 1px solid #999;
+td,
+th {
+  border: 1px solid #999;
 }
 
-input,button {
-    /* Remove outline */
-    outline: none;
-    border: none;
+input,
+button {
+  /* Remove outline */
+  outline: none;
+  border: none;
 }
 
 /* Style settings */
 body {
-    font: 12px/1.5 "Microsoft YaHei", Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
-    color: #333;
+  font: 12px/1.5 'Microsoft YaHei', Tahoma, Helvetica, Arial, '\5b8b\4f53',
+    sans-serif;
+  color: #333;
 }
 
 a {
-    text-decoration: none;
-    color: #666;
+  text-decoration: none;
+  color: #666;
 }
 
 a:hover {
-    color: #2ddd5f;
-    text-decoration: none;
+  color: #2ddd5f;
+  text-decoration: none;
 }
 
 .leftfix {
-    float: left;
+  float: left;
 }
 
 .rightfix {
-    float: right;
+  float: right;
 }
 
 .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
+  content: '';
+  display: block;
+  clear: both;
 }
 
 * {
-    scroll-behavior: smooth;
-    font-family: 'SoDoSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+  font-family: 'SoDoSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /* #endregion reset css */
 
 /* #region navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* height: 5vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* height: 5vh;
     line-height: 5vh; */
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
-    overflow: auto;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  overflow: auto;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
 }
 
 .name-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .name {
-    margin: 0;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .nav-item {
-    margin: 0 25px;
-    font-size: 20px;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  margin: 0 25px;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .nav-item:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 5px;
-    /* Adjust this value to control the thickness of the underline */
-    text-underline-offset: 5px;
-    /* Adjust this value to control how far the underline is from the text */
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  /* Adjust this value to control the thickness of the underline */
+  text-underline-offset: 5px;
+  /* Adjust this value to control how far the underline is from the text */
 }
 
 /* #endregion narbar */
 
-
 .wrapper {
-    margin-top: 5vh;
+  margin-top: 5vh;
 }
 
 .hollow-text {
-    font-size: 10vw;
-    font-family: 'futura';
-    font-weight: bolder;
-    line-height: 12vmax;
-    height: 12vmax;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position-x: center;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 1px rgba(191, 255, 0, 0.599) ;
-    color: transparent;
-    margin-top: 12vmin;
-    margin-bottom: 5vmin;
-
+  font-size: 10vw;
+  font-family: 'futura';
+  font-weight: bolder;
+  line-height: 12vmax;
+  height: 12vmax;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-x: center;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px rgba(191, 255, 0, 0.599);
+  color: transparent;
+  margin-top: 12vmin;
+  margin-bottom: 5vmin;
 }
 
 /* #region about seciton */
 .content-container {
-    min-height: auto;
-    overflow: auto;
-    /* background-color: aquamarine; */
-    display: flex;
+  min-height: auto;
+  overflow: auto;
+  /* background-color: aquamarine; */
+  display: flex;
 }
 
 .about {
-    min-height: 50vh;
+  min-height: 50vh;
 }
 
 .about .image,
 .text {
-    flex: 1;
-    width: 50%;
-    /* takes up half the width */
-    padding: 0 30px;
-    margin-top: 25px;
-    text-align: right;
+  flex: 1;
+  width: 50%;
+  /* takes up half the width */
+  padding: 0 30px;
+  margin-top: 25px;
+  text-align: right;
 }
 
 .content-container text {
-    text-align: center;
-    width: 50%;
+  text-align: center;
+  width: 50%;
 }
 
 .content-container .text h2 {
-    font-size: 10vw;
+  font-size: 10vw;
 }
 
 .content-container .text h3 {
-    font-size: 1.3vw;
-    word-wrap: break-word;
-    font-weight: bold;
-
+  font-size: 1.3vw;
+  word-wrap: break-word;
+  font-weight: bold;
 }
 /* #endregion about seciton */
 
 /* #region projects section */
 .projects {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
 }
 
 .projects .text,
 .projects .project-container,
 .progress-container {
-    flex: 1;
-    max-width: 50%;
-}
-
-.project {
-    flex-basis: calc(33.33% - 20px);
-    /* Controls the width of each item, minus the width of the spacing and borders */
-    margin: 0 10px;
-    margin-top: 1vh;
-    box-sizing: border-box;
-    /* Box model including borders */
-    border: 2px solid #000;
-    border-radius: 1.875rem;
-    overflow: hidden;
+  flex: 1;
+  max-width: 50%;
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1vw;
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    margin-top: 20vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1vw;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 20vh;
 }
 
 /* When there are only two items in the second row, move the last item to the right for center alignment */
 .project-container:nth-child(2) .project:nth-child(3) {
-    margin-right: auto;
+  margin-right: auto;
+}
+
+.project {
+  flex-basis: calc(33.33% - 20px);
+  /* Controls the width of each item, minus the width of the spacing and borders */
+  margin: 0 10px;
+  margin-top: 1vh;
+  box-sizing: border-box;
+  /* Box model including borders */
+  border: 2px solid #000;
+  border-radius: 1.3rem;
+  overflow: hidden;
+  padding: 0.1rem;
 }
 
 .project a {
-    display: block;
-    /* Make the link a block-level element, you can set the width and height */
-    height: 100%;
-    /* Let the link fill the entire project container */
-    padding: 6px;
-    /* Add padding to center link content */
-    box-sizing: border-box;
-    /* Box model including padding */
+  display: block;
+  /* Make the link a block-level element, you can set the width and height */
+  height: 100%;
+  /* Let the link fill the entire project container */
+  padding: 6px;
+  /* Add padding to center link content */
+  box-sizing: border-box;
+  /* Box model including padding */
 }
 
 .project img {
-    width: 100%;
-    height: 100%;
-    display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
+  display: block;
 }
 
 .projects .text,
 .progress-container {
-    flex: 1;
-    width: 50%;
-    padding: 0 30px;
-    /* margin-top: 50px; */
+  flex: 1;
+  width: 50%;
+  padding: 0 30px;
+  /* margin-top: 50px; */
 }
 
 .projects .text {
-    text-align: left;
+  text-align: left;
 }
 
 .projects .text h2,
 .projects .text h3 {
-    text-align: left;
+  text-align: left;
 }
 
 .background-1 {
-    background-image: url(./img/about-section.jpg);
+  background-image: url(./img/about-section.jpg);
 }
 
 .background-2 {
-    background-image: url(./img/project-section.png);
+  background-image: url(./img/project-section.png);
 }
 
 .background-3 {
-    background-image: url(./img/skills-section.jpg);
+  background-image: url(./img/skills-section.jpg);
 }
 
 .background-4 {
-    background-image: url(./img/contact-section.jpg);
+  background-image: url(./img/contact-section.jpg);
 }
 /* #endregion projects section */
 
 /* #region skills seciton */
 .skills {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
 .skill .text,
 .progress-container {
-    flex: 1;
-    width: 50%;
-    padding: 0 30px;
-    margin-top: 50px;
+  flex: 1;
+  width: 50%;
+  padding: 0 30px;
+  margin-top: 50px;
 }
 
 .progress-description {
-    font-size: 2vh;
-    margin-bottom: 5px;
-    font-weight: 600;
-
+  font-size: 2vh;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .progress-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5rem;
-    /* Define the spacing of the grid lines */
-    max-height: 10vh;
-    margin-top: 10vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  /* Define the spacing of the grid lines */
+  max-height: 10vh;
+  margin-top: 10vh;
 }
 
 .progress {
-    height: 20px;
-    background-color: #ddd;
-    /* The color of unfinished progress */
+  height: 20px;
+  background-color: #ddd;
+  /* The color of unfinished progress */
 }
 
 .progress-done {
-    height: 20px;
-    background: linear-gradient(45deg,
-            rgba(255, 255, 255, .15) 25%,
-            transparent 25%,
-            transparent 50%,
-            rgba(255, 255, 255, .15) 50%,
-            rgba(255, 255, 255, .15) 75%,
-            transparent 75%,
-            transparent);
-    background-color: #007bff;
-    background-size: 40px 40px;
-    animation: progress-bar-stripes 1s linear infinite;
+  height: 20px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-color: #007bff;
+  background-size: 40px 40px;
+  animation: progress-bar-stripes 1s linear infinite;
 }
 
 .progress,
 .progress-done {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .color1 {
-    background-color: #21b853;
+  background-color: #21b853;
 }
 
 .color2 {
-    background-color: #21b853;
+  background-color: #21b853;
 }
 
 .color3 {
-    background-color: #eacf21;
+  background-color: #eacf21;
 }
 
 .color4 {
-    background-color: #eacf21;
+  background-color: #eacf21;
 }
 
 .color5 {
-    background-color: #427FDB;
+  background-color: #427fdb;
 }
 
 .color6 {
-    background-color: #0277BD;
+  background-color: #0277bd;
 }
 
 @keyframes progress-bar-stripes {
-    from {
-        background-position: 40px 0;
-    }
+  from {
+    background-position: 40px 0;
+  }
 
-    to {
-        background-position: 0 0;
-    }
+  to {
+    background-position: 0 0;
+  }
 }
 /* #endregion skills seciton */
 
 /* #region contact section */
 .contact {
-    padding-left: 6vw;
-    
+  padding-left: 6vw;
 }
 
 .fullsize-content {
-    width: 80%;
+  width: 80%;
 }
 
 .fullsize-content h2 {
-    font-size: 10vh;
+  font-size: 10vh;
 }
 
 .contact-btn {
-    position: absolute;
-    margin: 1.625rem 0;
-    height: 70px;
-    line-height: 70px;
-    width: 21.875rem;
-    font-size: 20px;
-    font-weight: 500;
-    color: #545454;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 20px;
-    border: 3px solid #000000;
-    transition: 0.8s;
-    margin-top: 0;
+  position: absolute;
+  margin: 1.625rem 0;
+  height: 70px;
+  line-height: 70px;
+  width: 21.875rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: #545454;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 3px solid #000000;
+  transition: 0.8s;
+  margin-top: 0;
 }
 
 .contact-btn:hover {
-    background-color: #000000;
-    color: #FFFFFF;
-    transition: 1s;
-    text-decoration: none;
+  background-color: #000000;
+  color: #ffffff;
+  transition: 1s;
+  text-decoration: none;
 }
 
 .icon-links {
-    margin-top: 12.7rem;
+  margin-top: 12.7rem;
 }
 
 .icon-links a {
-    font-size: 3vw;
-    margin: 10px;
+  font-size: 3vw;
+  margin: 10px;
 }
 
 .icon-links a:first-child i {
-    margin-left: 0;
+  margin-left: 0;
 }
 /* #endregion contact section */
 
 .footer {
-    font-size: 1vh;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: 20px;
+  font-size: 1vh;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 600px) {
-    /* #region narbar */
-    .container {
-        flex-direction: row;
-        align-items: center;
-    }
+  /* #region narbar */
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .name-container {
-        justify-content: flex-start;
-        margin-right: 50px;
-    }
+  .name-container {
+    justify-content: flex-start;
+    margin-right: 50px;
+  }
 
-    .navbar-container {
-        justify-content: flex-end;
-    }
-    /* #endregion narbar */
+  .navbar-container {
+    justify-content: flex-end;
+  }
+  /* #endregion narbar */
 
-    .project-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        width: 80%;
-    }
+  .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 80%;
+  }
 
-    .projects .project-container .project {
-        flex: 0 0 auto;
-        /* Modify here so that the item no longer automatically resizes according to the content */
-        width: 13rem;
-        height: 15rem;
-    }
+  .projects .project-container .project {
+    flex: 0 0 auto;
+    /* Modify here so that the item no longer automatically resizes according to the content */
+    width: 13rem;
+    height: 15rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+  }
 
-    .name-container,
-    .navbar-container {
-        justify-content: center;
-        /* overflow-x: hidden; */
-    }
+  .name-container,
+  .navbar-container {
+    justify-content: center;
+    /* overflow-x: hidden; */
+  }
 
-    .navbar-container .nav-item {
-        margin: 0 1rem;
-    }
-    /* .navbar-container .nav-item:first-child {
+  .navbar-container .nav-item {
+    margin: 0 1rem;
+  }
+  /* .navbar-container .nav-item:first-child {
         margin-left: 0 .01rem;
     } */
 
-    .content-container {
-        flex-direction: column;
-        height: auto;
-        padding-bottom: 20px;
-    }
+  .content-container {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
 
-    .content-container .text {
-        width: 100%;
-        padding: 0 10px;
-    }
+  .content-container .text {
+    width: 100%;
+    padding: 0 10px;
+  }
 
-    .content-container .text h2 {
-        text-align: center;
-        font-size: 6vh;
-    }
+  .content-container .text h2 {
+    text-align: center;
+    font-size: 6vh;
+  }
 
-    .content-container .text h3 {
-        text-align: start;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        font-size: 4vw;
-    }
+  .content-container .text h3 {
+    text-align: start;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 4vw;
+  }
 
-    .about .text {
-        padding: 0 30px;
-    }
+  .about .text {
+    padding: 0 30px;
+  }
 
-    .image,
-    .text {
-        width: 100vw;
-        padding: 20px;
-        box-sizing: border-box;
-        /* include padding and border in element's total width and height */
-    }
-    .wrapper .image img {
-        width: 85vw;
-    }
+  .image,
+  .text {
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    /* include padding and border in element's total width and height */
+  }
+  .wrapper .image img {
+    width: 85vw;
+  }
 
-    .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .text h2 {
-        font-size: 6vh;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
+  .text h2 {
+    font-size: 6vh;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 
-    .projects .text {
-        flex: 1;
-        max-width: 100%;
-    }
+  .projects .text {
+    flex: 1;
+    max-width: 100%;
+  }
 
-    .projects .project-container {
-        margin: 2vh 14.5vw;
-    }
+  .projects .project-container {
+    margin: 2vh 14.5vw;
+  }
 
-    .projects .text {
-        width: 100%;
-    }
+  .projects .text {
+    width: 100%;
+  }
 
-    .projects .project-container .project {
-        flex: 0 0 auto;
-        /* Modify here so that the item no longer automatically resizes according to the content */
-        width: 11rem;
-        height: 12rem;
-        overflow-x: hidden !important;
-    }
+  .projects .project-container .project {
+    flex: 0 0 auto;
+    /* Modify here so that the item no longer automatically resizes according to the content */
+    width: 11rem;
+    height: 12rem;
+    overflow-x: hidden !important;
+  }
 
-    .progress-container {
-        grid-template-columns: 1fr;
-        max-height: 100%;
-        max-width: 100vw !important;      
-    }
+  .progress-container {
+    grid-template-columns: 1fr;
+    max-height: 100%;
+    max-width: 100vw !important;
+  }
 
-    .progress-item {
-        width: 68.5vw;
-    }
+  .progress-item {
+    width: 68.5vw;
+  }
 
-    .skills {
-        flex-direction: column-reverse;
-    }
+  .skills {
+    flex-direction: column-reverse;
+  }
 
-    .contact {
-        padding-left: 3vw;
-    }
+  .contact {
+    padding-left: 3vw;
+  }
 
-    .fullsize-content {
-        width: 90%;
-    }
+  .fullsize-content {
+    width: 90%;
+  }
 
-    .fullsize-content h2 {
-        font-size: 5vh;
-    }
+  .fullsize-content h2 {
+    font-size: 5vh;
+  }
 
-    .contact-btn {
-        max-width: 12rem;
-        font-size: 12px;
-        height: 30px;
-        line-height: 30px;
-        margin-top: 0rem;
-    }
+  .contact-btn {
+    max-width: 12rem;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 0rem;
+  }
 
-    .icon-links {
-        margin-top: 6.5rem;
-    }
+  .icon-links {
+    margin-top: 6.5rem;
+  }
 
-    .icon-links a {
-        font-size: 18px;
-    }
+  .icon-links a {
+    font-size: 18px;
+  }
 }
