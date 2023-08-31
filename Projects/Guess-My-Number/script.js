@@ -1,166 +1,57 @@
-let answer = Math.trunc(Math.random() * 100) + 1;
-let score = 10,
-	highScore = 0;
-let historyArr = [];
+'use strict';
 
-let tooHighIcon = "icons/arrow-circle-up-solid.svg",
-	tooLowIcon = "icons/arrow-circle-down-solid.svg",
-	noNumberIcon = "icons/exclamation-triangle-solid.svg",
-	duplicatedIcon = "icons/exclamation-triangle-solid.svg"
-	failIcon = "icons/dizzy-solid.svg",
-	correctIcon = "icons/thumbs-up-solid.svg";
+let secretNumber = Math.trunc(Math.random() * 30) + 1;
+let score = 30;
+let highScore = 0;
 
-let tooHighMsg = "Number too High!!",
-	tooLowMsg = "Number too Low!",
-	noNumberMsg = "Please enter a number!",
-	duplicatedMsg = "Try other number!",
-	failMsg = "Fail!",
-	correctMsg = "Correct!";
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
 
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
 
+  // When there is no input
+  if (!guess) {
+    // document.querySelector('.message').textContent = '⚠ No number!';
+    displayMessage('⚠ No number!');
 
+    // When player wins
+  } else if (guess === secretNumber) {
+    displayMessage('🎉 Correct Number!');
+    document.querySelector('.number').textContent = secretNumber;
 
-function checkAns() {
-	let value = document.getElementById("numberInput").value;
-	if (value == '') {
-		showHint(noNumberIcon, noNumberMsg);
-	} else {
-		value = parseInt(value, 10);
-		if (historyArr.indexOf(value) != -1) {
-			showHint(duplicatedIcon, duplicatedMsg);
-		} else {
-			historyArr.push(value);
-			value == answer ? correct() : giveHint(value);
-		}
-	}
-}
+    document.querySelector('body').style.backgroundColor = '#55d224ae';
+    document.querySelector('.number').style.width = '30rem';
 
-// Check the input value, if it's outside the range, set it to a default value
-function checkNumRange(value) {
-	let input = document.getElementById("numberInput");
-	if (value != '') {
-		if (value < 1) {
-			input.value = 1;
-		} else if (value > 100) {
-			input.value = 100;
-		}
-	}
-}
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highScore').textContent = highScore;
+    }
 
+    // When guess is wrong
+  } else if (guess !== secretNumber) {
+    if (score > 1) {
+      displayMessage(guess > secretNumber ? '⬆ Too high!' : '⬇ Too low!');
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      displayMessage('💩 You lost the game!');
+      document.querySelector('body').style.backgroundColor = '#ef0808';
+      document.querySelector('.score').textContent = 0;
+    }
+  }
+});
 
-function giveHint(value) {
-	score--;
-	document.getElementById("score").innerText = score;
-	if (score == 0) {
-		gameOver();
-	} else {
-		value > answer ? showHint(tooHighIcon, tooHighMsg) : showHint(tooLowIcon, tooLowMsg);
-		value > answer ? addHistory(value, tooHighIcon) : addHistory(value, tooLowIcon);
-	}
-}
+document.querySelector('.again').addEventListener('click', function () {
+  score = 50;
+  secretNumber = Math.trunc(Math.random() * 30) + 1;
 
-
-function showHint(icon, message) {
-	let hint = `<img src=${icon}><h3 class='hint'>${message}</h3>`;
-	document.getElementById("hint-div").innerHTML = hint;
-}
-
-function addHistory(value, icon){
-	let newHistory = `<div class='history'><span>${value}</span><img src=${icon}></div>`
-	let history = document.getElementById("guessingHistory");
-	history.innerHTML = newHistory + history.innerHTML;
-}
-
-
-// Change the style when user gets the correct answer
-function correct() {
-	stopTheGame();
-	showHint(correctIcon, correctMsg);
-	document.getElementById("bigContainer").style.background = correctBackground;
-}
-
-
-// Change the style when user fail to get the correct number
-function gameOver() {
-	stopTheGame();
-	showHint(failIcon, failMsg);
-	document.getElementById("bigContainer").style.background = failBackground;
-}
-
-
-// Disable the input field
-function stopTheGame() {
-	// Update the high score
-	highScore = Math.max(score, highScore);
-	document.getElementById("highscore").innerText = highScore;
-
-	// When user gets the correct answer, disable the check button
-	let checkBtn = document.getElementById("checkBtn");
-	checkBtn.disabled = true;
-	checkBtn.style.cursor = "unset";
-	checkBtn.style.border = "2px solid gray";
-	checkBtn.style.backgroundColor = "lightgrey";
-
-	// When user gets the correct answer, disable the input box
-	document.getElementById("numberInput").disabled = true;
-
-	// Change the answer box size and color
-	let answerBox = document.getElementById("answerBox");
-	answerBox.style.width = "20vmin";
-	answerBox.style.backgroundColor = "lightcoral";
-
-	// Show the answer to user
-	document.getElementById("answer").innerText = answer;
-}
-
-
-// Reset everything to initial
-function startOver() {
-	// Set a new number
-	answer = Math.trunc(Math.random() * 100) + 1;
-
-	// Reset the answer box and hint
-	document.getElementById("hint-div").innerHTML = "<h3 class='hint'>Let's Start Guessing...</h3>"
-	document.getElementById("answer").innerText = "?";
-
-	// Reset the score
-	score = 10;
-	document.getElementById("score").innerText = score;
-
-	// Reset the history
-	document.getElementById("guessingHistory").innerHTML = "";
-	historyArr = [];
-
-	// Reset the check button
-	let checkBtn = document.getElementById("checkBtn");
-	checkBtn.disabled = false;
-	checkBtn.style.cursor = "pointer";
-	checkBtn.style.border = "2px solid yellow";
-	checkBtn.style.backgroundColor = "lightblue";
-
-	// Reset the input box
-	let inputBox = document.getElementById("numberInput");
-	inputBox.disabled = false;
-	inputBox.value = "";
-
-	// Reset the answer box size and color
-	let answerBox = document.getElementById("answerBox");
-	answerBox.style.width = "10vmin";
-	answerBox.style.backgroundColor = "white";
-
-	// Reset the background color
-	document.getElementById("bigContainer").style.background = initialBackground;
-}
-
-
-function updateOutput(){
-	var slider = document.getElementById("numberInputSlide")
-	var output = document.getElementById("numberInput");
-	output.value = slider.value;
-}
-
-function updateSlide(){
-	var slider = document.getElementById("numberInputSlide")
-	var output = document.getElementById("numberInput");
-	slider.value = output.value;
-}
+  displayMessage('Start guessing...');
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+});
